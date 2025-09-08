@@ -1,0 +1,98 @@
+mere pas ye ek coge ge import React from "react";
+// import { CalendarDaysIcon } from "@heroicons/react/24/outline";
+
+const DateRangePicker = () => {
+  return (
+    <>
+    <div className=" w-150 flex justify-between items-center p-4 rounded-lg">
+    <h1 className="text-teal-700 text-2xl ">Select Date</h1>
+    <p className="text-teal-700 text-1xl">Fore</p>
+    <div className="flex items-center border border-teal-600 rounded-full bg-white px-3 py-2" >
+    <input className="outline-none focus:outline-none focus:ring-0" type="date" id="birthday" name="birthday"></input>
+    </div>
+    <p className="text-teal-700 text-1xl">to</p>
+    <div className="flex items-center border border-teal-600 rounded-full bg-white px-3 py-2" >
+    <input className="outline-none focus:outline-none focus:ring-0" type="date" id="birthday" name="birthday"></input>
+    </div>
+    </div>
+
+
+    </>
+  );
+};
+
+export default DateRangePicker;
+
+is me ye api call krna he // 5. Get Inventory Overview (protected, token required)
+export const getInventoryOverview = async () => {
+  const res = await api.get(API_ROUTES.inventory.overview);
+  return res.data;
+};
+
+
+
+post men me mene ye dal kr chek kra tha tik chala {
+"from":"25-08-01",
+"to": "2025-09-02"
+}
+
+result me ye rispons mila {
+    "reportNumber": "report_1757076052171",
+    "reportDate": {
+        "from": "Invalid Date",
+        "to": "02/09/2025"
+    },
+    "title": "Stock Report",
+    "columns": [
+        "item name",
+        "item code",
+        "sell capacity",
+        "current inventory",
+        "empty cell",
+        "last 7 day sell"
+    ],
+    "rows": [
+        {
+            "itemName": "Paracetamol",
+            "itemCode": "INV1001",
+            "sellCapacity": 100,
+            "currentInventory": 83,
+            "emptyCell": 17,
+            "last7DaySell": 2
+        },
+        {
+            "itemName": "Cough Syrup",
+            "itemCode": "INV1002",
+            "sellCapacity": 100,
+            "currentInventory": 49,
+            "emptyCell": 51,
+            "last7DaySell": 1
+        },
+        {
+            "itemName": "Antibiotic",
+            "itemCode": "INV1003",
+            "sellCapacity": 100,
+            "currentInventory": 30,
+            "emptyCell": 70,
+            "last7DaySell": 1
+        },
+        {
+            "itemName": "Cough Syrup",
+            "itemCode": "1008762",
+            "sellCapacity": 100,
+            "currentInventory": 60,
+            "emptyCell": 40,
+            "last7DaySell": 0
+        },
+        {
+            "itemName": "sharma",
+            "itemCode": "dheeraj",
+            "sellCapacity": 100,
+            "currentInventory": 1,
+            "emptyCell": 99,
+            "last7DaySell": 0
+        }
+    ]
+}
+
+mujhe is responsh ko isi page ke niche show krna he ek bill ke from ye rum me is me row or lonam bhi ho 
