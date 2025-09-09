@@ -42,6 +42,7 @@ body {
   background-repeat: no-repeat;
   background-color: #ecf6f6;
 }
+
 /* slick-slider  */
 
 /* base positioning container */
@@ -52,7 +53,7 @@ body {
 /* डॉट्स को नीचे केंद्र में रखें */
 .slick-slider .slick-dots {
   position: absolute;
-  bottom: -25px;            /* ऊपर-नीचे एडजस्ट करने के लिए */
+  bottom: -35px;            /* ऊपर-नीचे एडजस्ट करने के लिए */
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
@@ -71,7 +72,7 @@ body {
 .slick-slider .slick-prev,
 .slick-slider .slick-next {
   position: absolute;
-  bottom: -25px;            /* dots के समान लाइन पर लाने के लिए */
+  bottom: -35px;            /* dots के समान लाइन पर लाने के लिए */
   top: auto;
   transform: none;
   z-index: 20;
@@ -83,19 +84,20 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-  background: white;       /* आवश्यकता अनुसार बदलें */
-  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255, 255, 255, 0.276);       /* आवश्यकता अनुसार बदलें */
+  border: 2px solid rgba(0,0,0,0.08);
 }
 
 /* left arrow — dots के बाएँ */
 .slick-slider .slick-prev {
-  left: calc(50% - var(--arrow-gap));
+  left: calc(35% - var(--arrow-gap));
 }
 
 /* right arrow — dots के दाएँ */
 .slick-slider .slick-next {
-  left: calc(50% + var(--arrow-gap));
+  right: calc(-25% + var(--arrow-gap));
 }
+
 
 /* छोटे स्क्रीन पर spacing घटाओ */
 @media (max-width: 600px) {

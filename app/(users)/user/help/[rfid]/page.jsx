@@ -8,12 +8,13 @@ import { useEffect, useState } from "react";
 import { getUserByRFID, getUserBalance } from "@/services/userService";
 // import { getPrescriptionDetails, collectPrescription } from "@/services/prescriptionService";
 import { useParams } from "next/navigation";
+import { useI18n } from '@/app/i18n/I18nContext';
 
 function Help() {
    const params = useParams();
    const rfid = params.rfid
  const [user, setUser] = useState(null);
-  // const [balance, setBalance] = useState(null);
+   const { t } = useI18n();
 console.log(rfid,",,,")
   useEffect(() => {
     const fetchData = async () => {
@@ -21,8 +22,6 @@ console.log(rfid,",,,")
         const userData = await getUserByRFID(rfid);
         setUser(userData);
 
-        // const bal = await getUserBalance("RFID1001");
-        // setBalance(bal);
       } catch (err) {
         console.error("Error fetching data:", err);
       }
@@ -31,32 +30,17 @@ console.log(rfid,",,,")
   }, []);
 
   console.log(user)
-  // const handleCollect = async () => {
-  //   try {
-  //     const res = await collectPrescription("00000125", { collectedBy: "self" });
-  //     console.log("Prescription collected:", res);
-  //   } catch (err) {
-  //     console.error("Error collecting prescription:", err);
-  //   }
-  // };
-
-
-
-  // // ............
-  // const pageData = [{pageData:"Check Balance",
-  //                   pageLink:`/user/checkbalance/${user?.rfid}`},
-  //                   {pageData:"Medicine Prescriptions",
-  //                   pageLink: "/user/selectprescription"}];
+  
   const pageData = user ? [
-  { pageData: "Check Balance", pageLink: `/user/checkbalance/${user.rfid}` },
-  { pageData: "Medicine Prescriptions", pageLink: `/user/ordermadicine/${user.rfid}` }
+  { pageData:`${t("checkBalance")} `, pageLink: `/user/checkbalance/${user.rfid}` },
+  { pageData: `${t("medicinePrescriptions")}`, pageLink: `/user/selectprescription/${user.rfid}` }
 ] : [];
 
-  const HeadingText = { HeadingText1:`  Welecome ${user?.name}`,
-                        HeadingText2:"How Can We Help Today!"};
+  const HeadingText = { HeadingText1:`  ${t("welcome")} ${user?.name}`,
+                        HeadingText2:`${t("helpHeading2")}`};
 
   const bottomBtnRoot = { Cancel:"/user/popup/cancelprocess",
-                          Back:"/user/language",
+                          Back:`/user/language/${rfid}`,
                           Continue:"/user/ordermadicine"};
 
   return (

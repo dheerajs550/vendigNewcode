@@ -1,15 +1,20 @@
+"use client";
+import { useI18n } from '@/app/i18n/I18nContext';
 import ButtomBtn from '@/components/bottombutton/page'
 import Image from 'next/image'
 import React from 'react'
 
 function PrintBill() {
+     const { t } = useI18n();
+  
   const bottomBtnRoot=
    {Cancel:"/user/popup",
     Continue:"/user/popup",
     btntext:"Print Bill"
    }
-  const bottomBtnText = {Cancel: "Cancel",
-                         Continue: "Print Bill"}
+  const bottomBtnText = {Cancel: `${t("Cancel")}`,
+                         Continue: `${t("printBill")}`}
+     
   return (
  
   

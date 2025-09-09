@@ -1,0 +1,28 @@
+{
+  "USER":"USER",
+  "welcome": "स्वागत आहे",
+  "scanCard": "कृपया आपला RFID कार्ड स्कॅन करा",
+  "ChooseLanguage":"भाषा निवडा",
+  "checkBalance": "बॅलन्स पहा",
+  "YourAcoountBalanceIs":"आपल्या खात्यातील शिल्लक आहे",
+  "medicinePrescriptions": "औषध प्रिस्क्रिप्शन",
+  "helpHeading1": "{name} स्वागत आहे",
+  "helpHeading2": "आज आम्ही कशी मदत करू शकतो!",
+  "SelectRelationshipOption":"नातेसंबंधाचा पर्याय निवडा",
+   "Self": "स्वतः",
+  "Wife": "पत्नी",
+  "Daughter": "मुलगी",
+  "Son": "मुलगा",
+  "Father": "वडील",
+  "Mother": "आई",
+  "Other":"इतर",
+  "currentBalance":"सध्याचा शिल्लक",
+  "billingAmount":"बिल रक्कम",
+  "Cancel" : "रद्द करा",
+  "Back": "मागे",
+  "Continue" : "पुढे सुरू ठेवा",
+  "ViewBill":"बिल पहा"
+
+
+
+}

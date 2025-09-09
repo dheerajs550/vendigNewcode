@@ -1,9 +1,13 @@
-`useParams`
+"use client";
+
 import React from 'react'
  import Image from 'next/image';
  import Link from 'next/link';
+import { useI18n } from '@/app/i18n/I18nContext';
 function User() {
   const UserRfidCode ="RFID123456"
+      const { t } = useI18n();
+  
   // const AdminRfidCode ="RFID123456"
   return (
     <>
@@ -21,7 +25,7 @@ function User() {
 
           {/* Welcome Text */}
           <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-800">
-            Welcome
+           {t("welcome")}
           </h2>
 
           {/* Image */}
@@ -37,7 +41,7 @@ function User() {
 
           {/* Instruction */}
           <p className="text-gray-800 text-base sm:text-lg">
-            Please scan your RFID card
+          {t("scanCard")}
           </p>
         </div>
       </Link>

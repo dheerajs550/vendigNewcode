@@ -1,16 +1,19 @@
+"use client";
+import { useI18n } from '@/app/i18n/I18nContext'
 import ButtomBtn from '@/components/bottombutton/page'
 import HeadingTextCom from '@/components/heading/page'
 import React from 'react'
 
 function GenerateBill() {
+  const {t}= useI18n()
       const HeadingText={
   HeadingText1:"Collect Your medicine !"}
    const bottomBtnRoot={Cancel:"/user/popup",
                         Continue:"/user/printbill",
                         btntext:"View Bill"
                         }
-    const bottomBtnText = {Cancel: "Cancel",
-                           Continue: "View Bill"
+    const bottomBtnText = {Cancel: `${t("Cancel")}`,
+                           Continue: `${t("viewBill")}`
                           }
   return (
  

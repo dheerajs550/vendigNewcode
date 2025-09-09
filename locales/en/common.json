@@ -1,0 +1,26 @@
+{
+  "USER":"USER",
+  "ADMIN":"ADMIN",
+  "welcome": "Welcome",
+  "scanCard": "Please scan your RFID card",
+  "ChooseLanguage":"Choose Language",
+  "checkBalance": "Check Balance",
+  "YourAcoountBalanceIs":"Your Acoount Balance Is",
+  "medicinePrescriptions": "Medicine Prescriptions",
+  "helpHeading1": "Welcome {name}",
+  "helpHeading2": "How Can We Help Today!",
+  "SelectRelationshipOption":"Select Relationship Option",
+  "Seif":"Self",
+  "Wife":"Wife",
+  "Daughter":"Daughter",
+  "Son":"Son",
+  "Other":"Other",
+  "currentBalance":"Current Balance",
+  "billingAmount":"Billing Amount",
+  "Cancel": "Cancel",
+  "Back": "Back",
+  "Continue":"Continue",
+  "ViewBill":"View Bill",
+  "printBill": "बिल प्रिंट करें"
+
+}
